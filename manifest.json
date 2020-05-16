@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "PrivacyAlert",
+  "version": "1.0",
+  "description": "This extension attempts to make users aware of what their
+  data may be used
+  for and by whom when they sign up
+  for websites and services online.
+  ",
+
+  "permissions": ["notifications"],
+
+  "content_scripts": [{
+    "matches": [
+      "<all_urls>"
+    ],
+    "js": ["jquery-3.4.1.min.js", "content.js"]
+  }],
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
